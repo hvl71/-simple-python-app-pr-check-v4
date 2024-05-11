@@ -9,7 +9,8 @@ LABEL org.opencontainers.image.licenses=MIT
 WORKDIR /app
 
 # Copy only the requirements file and install dependencies
-COPY requirements.txt /app/
+#introduce error below intentionally to demo PR check failing
+COY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
